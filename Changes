@@ -1,5 +1,11 @@
 Revision history for Tie-Trace
 
+{{$NEXT}}
+
+0.15 2016-12-19T16:37:04Z
+	fix test for bleadperl.
+	Thanks to ANDK@cpan.org.
+
 0.14	2009-12-29 02:41
 	fix bug: problem occured when deleted value of hash is undef.
  

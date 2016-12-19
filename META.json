@@ -64,5 +64,8 @@
          "web" : "https://github.com/ktat/Tie-Trace"
       }
    },
-   "version" : "0.14"
+   "version" : "0.15",
+   "x_contributors" : [
+      "ktat <ktat.is@gmail.com>"
+   ]
 }
