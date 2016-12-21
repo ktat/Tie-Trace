@@ -5,4 +5,4 @@ install:
 perl:
   - "5.14"
   - "5.16"
-  - "5.25.1"
+  - "bleadperl"
