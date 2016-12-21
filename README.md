@@ -4,7 +4,7 @@ Tie::Trace - easy print debugging with tie, for watching variable
 
 # VERSION
 
-Version 0.15
+Version 0.16
 
 # SYNOPSIS
 

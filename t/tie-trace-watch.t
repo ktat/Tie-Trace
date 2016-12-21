@@ -34,14 +34,14 @@ use_ok("Tie::Trace");
   
 
   $hash{1}->{hoge} = 4;     # hoge -- 4
-  like($err, qr/^main:: \%hash => \{1\}{hoge} => 4/m, '$hash{1}->{hoge} = 4');
+  like($err, qr/^main:: \%hash => \{1\}\{hoge\} => 4/m, '$hash{1}->{hoge} = 4');
 
   close STDERR;
 
   open STDERR, '>', \$err or die $!;
 
   $hash{1}->{hoge} = 0;     # hoge -- 0
-  like($err, qr/^main:: \%hash => \{1\}{hoge} => 0/m, '$hash{1}->{hoge} = 0');
+  like($err, qr/^main:: \%hash => \{1\}\{hoge\} => 0/m, '$hash{1}->{hoge} = 0');
 
   
   $hash{2}->{hoge} = 222;   # 2 -- HASH(...)
@@ -51,7 +51,7 @@ use_ok("Tie::Trace");
  
 
   push(@{$hash{1}->{hoge3}}, "array");# array
-  like($err, qr/^main:: \%hash => \@{\{1\}\{hoge3\}} => PUSH\('?array'?\)/m, 'push(@{$hash{1}->{hoge3}}, "array")');
+  like($err, qr/^main:: \%hash => \@\{\{1\}\{hoge3\}\} => PUSH\('?array'?\)/m, 'push(@{$hash{1}->{hoge3}}, "array")');
 
   push(@{$hash{1}->{hoge3}}, "array2");# array
   like($err, qr/^main:: \%hash => \@\{\{1\}\{hoge3\}\} => PUSH\('?array2'?\)/m, 'push(@{$hash{1}->{hoge3}}, "array2")');

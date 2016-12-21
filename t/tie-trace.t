@@ -24,7 +24,7 @@ use Tie::Trace ":all";
   like($err, qr/^main:: \%hash => \{1\}\{hoge\} => 3/m, '$hash{1}->{hoge} = 3');
 
   $hash{1}->{hoge} = 4;     # hoge -- 4
-  like($err, qr/^main:: \%hash => \{1\}{hoge} => 4/m, '$hash{1}->{hoge} = 4');
+  like($err, qr/^main:: \%hash => \{1\}\{hoge\} => 4/m, '$hash{1}->{hoge} = 4');
 
   my $s2;
   my $array = [ 1, 2, \$s2 ];

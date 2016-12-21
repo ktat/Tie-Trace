@@ -26,6 +26,7 @@ sub hoge2 {
   my $err;
   local $SIG{__WARN__} = sub { $err .= shift; };
   $hoge->{$key} = $value;
+  $err =~s{t/tie-trace-module\.t}{t-tie-trace-module\.t}g;
   return $err;
 }
 
@@ -59,4 +60,4 @@ Hoge:: %hoge => {abc} => 'def' at t/lib/Hoge.pm line 15.
 --- i_hoge2
 key => "value"
 --- e
-Hoge:: %hoge => {key} => 'value' at t/tie-trace-module.t line 28.
+Hoge:: %hoge => {key} => 'value' at t-tie-trace-module.t line 28.
