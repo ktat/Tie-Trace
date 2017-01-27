@@ -26,7 +26,7 @@ sub hoge2 {
   my $err;
   local $SIG{__WARN__} = sub { $err .= shift; };
   $hoge->{$key} = $value;
-  $err =~s{t/tie-trace-module\.t}{t-tie-trace-module\.t}g;
+  $err =~s{t[/\\]tie-trace-module\.t}{t-tie-trace-module\.t}g;
   return $err;
 }
 
