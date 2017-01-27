@@ -2,6 +2,9 @@ Revision history for Tie-Trace
 
 {{$NEXT}}
 
+0.17 2017-01-27T22:49:55Z
+	fix test for windows
+
 0.16 2016-12-21T00:29:59Z
 	fix test again for bleadperl.
 	fix cpanfile.
